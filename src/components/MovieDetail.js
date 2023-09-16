@@ -22,7 +22,7 @@ function MovieDetail({ title, src, description, genres, url, rating }) {
       <hr />
       <a href={url}>Go to the site</a>
       <p />
-      <Link to="/">Go to the Movie List</Link>
+      <Link to={`${process.env.PUBLIC_URL}/`}>Go to the Movie List</Link>
     </div>
   );
 }
