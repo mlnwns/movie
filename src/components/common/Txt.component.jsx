@@ -14,8 +14,14 @@ const colorsType = {
   black: "text-black",
 };
 
-/** @param {{typography: keyof typeof typographyType, colors: keyof typeof colorsType, children: import("react").ReactNode}}*/
-const Txt = ({ typography = "p", colors = "black", children }) => {
+/**
+ * @param {{
+ *  typography: keyof typeof typographyType,
+ *  colors: keyof typeof colorsType,
+ *  children: React.ReactNode
+ * }}
+ * */
+export const Txt = ({ typography = "p", colors = "black", children }) => {
   return (
     <span
       className={classnames(typographyType[typography], colorsType[colors])}
@@ -24,5 +30,3 @@ const Txt = ({ typography = "p", colors = "black", children }) => {
     </span>
   );
 };
-
-export default Txt;
