@@ -6,8 +6,10 @@ export const HomePage = () => {
   return (
     <>
       <HomeHeader />
-      <HomeCarousel />
-      <div className="py-4">
+      <div className="my-6">
+        <HomeCarousel />
+      </div>
+      <div className="my-8">
         <HomeCategory />
       </div>
     </>

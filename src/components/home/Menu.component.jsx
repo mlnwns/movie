@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Icon } from "../common/Icon.component";
 import { Txt } from "../common/Txt.component";
+import classnames from "classnames";
+import { BASE_PADDING, MOBILE_WIDTH } from "../../constants";
+import { isMobile } from "react-device-detect";
 
 const homeMenu = [
   { iconType: "account", title: "마이페이지" },
@@ -18,7 +21,10 @@ export const Menu = () => {
       {isOpen ? (
         <div className="flex flex-col gap-2 z-50 absolute">
           <button
-            className="absolute w-screen h-[120vh] -left-6 -top-24 backdrop-blur-sm bg-[#00000050]"
+            className={classnames(
+              `absolute w-screen h-[120vh] -left-[${BASE_PADDING}] -top-24 backdrop-blur-sm bg-[#00000050]`,
+              !isMobile && `w-[${MOBILE_WIDTH}]`
+            )}
             aria-label="close"
             onClick={toggleOpen}
           ></button>
