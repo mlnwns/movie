@@ -41,9 +41,7 @@ const HomePage = () => {
       </Modal.Alert>
       <Modal.ToDay
         isOpen={isModalTodayOpen}
-        onClose={() => {
-          setIsModalTodayOpen(false);
-        }}
+        onClose={() => setIsModalTodayOpen(false)}
         onRequestClose={() => setIsModalTodayOpen(false)}
       >
         <img src="https://placehold.co/600x400" alt="placeholder" />
