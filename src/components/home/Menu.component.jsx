@@ -17,7 +17,11 @@ export const Menu = () => {
     <div className="relative w-6 h-6">
       {isOpen ? (
         <div className="flex flex-col gap-2 z-50 absolute">
-          <div className="absolute w-screen h-[120vh] -left-6 -top-24 backdrop-blur-sm bg-[#00000050]"></div>
+          <button
+            className="absolute w-screen h-[120vh] -left-6 -top-24 backdrop-blur-sm bg-[#00000050]"
+            aria-label="close"
+            onClick={toggleOpen}
+          ></button>
           <button className="absolute" onClick={toggleOpen} aria-label="close">
             <Icon type="close" />
           </button>
