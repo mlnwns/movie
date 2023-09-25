@@ -13,7 +13,7 @@ const IconType = {
   home: <RiHome5Line />,
   close: <AiOutlineClose />,
   account: <VscAccount />,
-  viewList: <CiViewList />,
+  viewlist: <CiViewList />,
 };
 
 /**
