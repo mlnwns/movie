@@ -6,19 +6,28 @@ import { AiOutlineClose } from "react-icons/ai";
 import { VscAccount } from "react-icons/vsc";
 import { CiViewList } from "react-icons/ci";
 
-const IconType = {
-  search: <BiSearch />,
-  back: <BsChevronLeft />,
-  hamberger: <RxHamburgerMenu />,
-  home: <RiHome5Line />,
-  close: <AiOutlineClose />,
-  account: <VscAccount />,
-  viewlist: <CiViewList />,
+const IconSize = {
+  small: "h-4 w-4",
+  medium: "h-6 w-6",
+  large: "h-8 w-8",
 };
 
 /**
  * @param {{
  *  type: keyof typeof IconType,
+ *  size: keyof typeof IconSize
  * }}
  */
-export const Icon = ({ type, size = "medium" }) => IconType[type];
+export const Icon = ({ type, size = "medium" }) => {
+  const IconType = {
+    search: <BiSearch className={IconSize[size]} />,
+    back: <BsChevronLeft className={IconSize[size]} />,
+    hamberger: <RxHamburgerMenu className={IconSize[size]} />,
+    home: <RiHome5Line className={IconSize[size]} />,
+    close: <AiOutlineClose className={IconSize[size]} />,
+    account: <VscAccount className={IconSize[size]} />,
+    viewlist: <CiViewList className={IconSize[size]} />,
+  };
+
+  return IconType[type];
+};
