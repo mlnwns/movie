@@ -4,7 +4,7 @@ import { Icon } from "../components/common/Icon.component";
 import { Txt } from "../components/common/Txt.component";
 import { Modal } from "../components/common/Modal.component";
 
-const TestPage = () => {
+export const TestPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalAlertOpen, setIsModalAlertOpen] = useState(false);
   const [isModalTodayOpen, setIsModalTodayOpen] = useState(false);
@@ -49,5 +49,3 @@ const TestPage = () => {
     </div>
   );
 };
-
-export default TestPage;

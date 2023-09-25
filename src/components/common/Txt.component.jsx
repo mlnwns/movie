@@ -19,12 +19,22 @@ const colorsType = {
  *  typography: keyof typeof typographyType,
  *  colors: keyof typeof colorsType,
  *  children: React.ReactNode
+ *  className: string
  * }}
  * */
-export const Txt = ({ typography = "p", colors = "black", children }) => {
+export const Txt = ({
+  typography = "p",
+  colors = "black",
+  children,
+  className,
+}) => {
   return (
     <span
-      className={classnames(typographyType[typography], colorsType[colors])}
+      className={classnames(
+        typographyType[typography],
+        colorsType[colors],
+        className
+      )}
     >
       {children}
     </span>
