@@ -4,11 +4,12 @@ import { Txt } from "../common/Txt.component";
 import classnames from "classnames";
 import { BASE_LEFT_PADDING_MINUS, MOBILE_WIDTH } from "../../constants";
 import { isMobile } from "react-device-detect";
+import { Link } from "react-router-dom";
 
 const homeMenu = [
-  { iconType: "account", title: "마이페이지" },
-  { iconType: "viewlist", title: "대여내역" },
-  { iconType: "home", title: "홈" },
+  { iconType: "account", title: "마이페이지", href: "#" },
+  { iconType: "viewlist", title: "대여내역", href: "#" },
+  { iconType: "home", title: "홈", href: "/" },
 ];
 
 export const Menu = () => {
@@ -34,12 +35,15 @@ export const Menu = () => {
           </button>
           <div className="top-8 absolute flex flex-col w-40 gap-2">
             {homeMenu.map((item) => (
-              <button className="flex justify-between py-2 px-4 rounded-lg border border-[#62AB05] bg-white">
+              <Link
+                className="flex justify-between py-2 px-4 rounded-lg border border-[#62AB05] bg-white"
+                to={item.href}
+              >
                 <Icon type={item.iconType} />
                 <Txt typography="h6" className="text-center flex-1">
                   {item.title}
                 </Txt>
-              </button>
+              </Link>
             ))}
           </div>
         </div>

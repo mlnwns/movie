@@ -19,7 +19,7 @@ const BaseModal = ({ children, isOpen, onRequestClose, className }) => {
     position: "absolute",
     inset: "0",
     width: "480px",
-    left: "1.5rem",
+    marginLeft: "1.5rem",
   };
 
   const modalElement = document.getElementById("modal");
@@ -50,7 +50,7 @@ const BaseModal = ({ children, isOpen, onRequestClose, className }) => {
 const AlertModal = ({ children, isOpen, onRequestClose, onClose }) => (
   <Modal isOpen={isOpen} onRequestClose={onRequestClose}>
     <div className="text-center my-2 transition-all">{children}</div>
-    <Button className="py-2 w-36 text-sm" onClick={onClose}>
+    <Button className="py-1 w-36 text-sm" onClick={onClose}>
       확인
     </Button>
   </Modal>
