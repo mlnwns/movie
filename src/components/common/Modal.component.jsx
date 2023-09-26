@@ -18,6 +18,8 @@ const BaseModal = ({ children, isOpen, onRequestClose, className }) => {
     WebkitBackdropFilter: "blur(4px)",
     position: "absolute",
     inset: "0",
+    width: "480px",
+    left: "1.5rem",
   };
 
   const modalElement = document.getElementById("modal");

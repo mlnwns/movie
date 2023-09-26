@@ -1,4 +1,4 @@
-import { BASE_PADDING, MOBILE_WIDTH } from "../../constants";
+import { BASE_LEFT_PADDING, BASE_PADDING, MOBILE_WIDTH } from "../../constants";
 import { Icon } from "../common/Icon.component";
 import { Txt } from "../common/Txt.component";
 import { Menu } from "./Menu.component";
@@ -10,8 +10,9 @@ export const HomeHeader = () => {
     <div className="h-12">
       <div
         className={classnames(
-          `fixed w-full left-0 px-[${BASE_PADDING}] flex justify-between py-2 border-b bg-white z-40`,
-          !isMobile && `w-[${MOBILE_WIDTH}] left-6`
+          "fixed left-0 flex justify-between py-2 border-b bg-white z-40",
+          BASE_PADDING,
+          !isMobile ? `${MOBILE_WIDTH} ${BASE_LEFT_PADDING}` : "w-full"
         )}
       >
         <div className="flex gap-4">

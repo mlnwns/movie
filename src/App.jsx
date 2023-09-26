@@ -10,7 +10,7 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className={isMobile ? "" : `w-[${MOBILE_WIDTH}]`}>
+      <div className={isMobile ? "" : MOBILE_WIDTH}>
         <RouterProvider router={router} />
       </div>
       <ReactQueryDevtools initialIsOpen={false} />
