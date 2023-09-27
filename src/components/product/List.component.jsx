@@ -29,9 +29,9 @@ const products = [
 export const ProductList = () => {
   return (
     <section>
+      <Br />
       {products.map((product) => (
         <>
-          <Br />
           <ProductItem data={product} />
           <Br />
         </>

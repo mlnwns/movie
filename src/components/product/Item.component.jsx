@@ -16,7 +16,7 @@ export const ProductItem = ({ data }) => {
   const { img, title, price, place, commentCount } = data;
 
   return (
-    <div className="py-4 flex gap-4">
+    <button className="py-4 flex gap-4 text-left w-full">
       <div className="h-20 w-20 overflow-hidden">
         <img src={img.src} alt={img.alt} />
       </div>
@@ -41,6 +41,6 @@ export const ProductItem = ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </button>
   );
 };
