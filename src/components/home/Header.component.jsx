@@ -7,12 +7,12 @@ import { isMobile } from "react-device-detect";
 
 export const HomeHeader = () => {
   return (
-    <div className="h-12">
+    <div className="h-10">
       <div
         className={classnames(
           "fixed left-0 flex justify-between py-2 border-b bg-white z-40",
           BASE_PADDING,
-          !isMobile ? `${MOBILE_WIDTH} ${BASE_LEFT_PADDING}` : "w-full"
+          !isMobile ? `${MOBILE_WIDTH}` : "w-full"
         )}
       >
         <div className="flex gap-4">

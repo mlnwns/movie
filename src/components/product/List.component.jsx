@@ -1,4 +1,5 @@
 import { Br } from "../common/Br.component";
+import { Txt } from "../common/Txt.component";
 import { ProductItem } from "./Item.component";
 
 const products = [
@@ -35,6 +36,13 @@ export const ProductList = () => {
           <Br />
         </>
       ))}
+      <Txt
+        typography="h4"
+        colors="secondary"
+        className="flex justify-center text-center py-4"
+      >
+        더이상 제품이 없어요
+      </Txt>
     </section>
   );
 };
