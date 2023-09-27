@@ -18,7 +18,7 @@ export const Menu = () => {
   const toggleOpen = () => setIsOpen((prev) => !prev);
 
   return (
-    <div className="relative w-6 h-6">
+    <div className="relative w-8 h-8">
       {isOpen ? (
         <div className="flex flex-col gap-2 z-50 absolute">
           <button
@@ -31,7 +31,7 @@ export const Menu = () => {
             onClick={toggleOpen}
           ></button>
           <button className="absolute" onClick={toggleOpen} aria-label="close">
-            <Icon type="close" />
+            <Icon type="close" size="large" />
           </button>
           <div className="top-8 absolute flex flex-col w-40 gap-2">
             {homeMenu.map((item) => (
@@ -49,7 +49,7 @@ export const Menu = () => {
         </div>
       ) : (
         <button onClick={toggleOpen} aria-label="hamberger absolute">
-          <Icon type="hamberger" />
+          <Icon type="hamberger" size="large" />
         </button>
       )}
     </div>

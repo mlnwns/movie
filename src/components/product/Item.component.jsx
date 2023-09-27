@@ -35,7 +35,7 @@ export const ProductItem = ({ data }) => {
           <Txt typography="h6" colors="secondary">
             {`${price.original} / ${price.type}`}
           </Txt>
-          <div className="flex items-center">
+          <div className="flex items-center gap-1">
             <Icon type="message" size="small" />
             <Txt typography="p">{commentCount}</Txt>
           </div>

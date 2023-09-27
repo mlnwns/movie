@@ -1,4 +1,4 @@
-import { BASE_LEFT_PADDING, BASE_PADDING, MOBILE_WIDTH } from "../../constants";
+import { BASE_PADDING, MOBILE_WIDTH } from "../../constants";
 import { Icon } from "../common/Icon.component";
 import { Txt } from "../common/Txt.component";
 import { Menu } from "./Menu.component";
@@ -7,19 +7,19 @@ import { isMobile } from "react-device-detect";
 
 export const HomeHeader = () => {
   return (
-    <div className="h-10">
+    <div className="h-16">
       <div
         className={classnames(
-          "fixed left-0 flex justify-between py-2 border-b bg-white z-40",
+          "fixed left-0 flex justify-between py-4 border-b bg-white z-40",
           BASE_PADDING,
           !isMobile ? `${MOBILE_WIDTH}` : "w-full"
         )}
       >
         <div className="flex gap-4">
           <Menu />
-          <Txt>전남대</Txt>
+          <Txt typography="h4">전남대</Txt>
         </div>
-        <Icon type="search" />
+        <Icon type="search" size="large" />
       </div>
     </div>
   );
