@@ -1,4 +1,4 @@
-import { BiSearch } from "react-icons/bi";
+import { BiSearch, BiMessageRoundedDetail } from "react-icons/bi";
 import { BsChevronLeft } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RiHome5Line } from "react-icons/ri";
@@ -27,6 +27,7 @@ export const Icon = ({ type, size = "medium" }) => {
     close: <AiOutlineClose className={IconSize[size]} />,
     account: <VscAccount className={IconSize[size]} />,
     viewlist: <CiViewList className={IconSize[size]} />,
+    message: <BiMessageRoundedDetail className={IconSize[size]} />,
   };
 
   return IconType[type];

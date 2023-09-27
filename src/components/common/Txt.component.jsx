@@ -8,10 +8,13 @@ const typographyType = {
   h5: "text-lg font-bold",
   h6: "text-base font-bold",
   p: "text-base",
+  subtitle: "text-sm",
 };
 
 const colorsType = {
   black: "text-black",
+  secondary: "text-[#B4B4B4]",
+  secondaryLight: "text-[#707070]",
 };
 
 /**
