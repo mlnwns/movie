@@ -2,9 +2,6 @@ import { Br } from "../common/Br.component";
 import { Carousel } from "../common/Carousel.component";
 import { ProductCompany } from "./Company.component";
 import { Txt } from "../common/Txt.component";
-import { Button } from "../common/Button.component";
-import classnames from "classnames";
-import { BASE_LEFT_PADDING_MINUS } from "../../constants";
 
 /**
  * @param {{
