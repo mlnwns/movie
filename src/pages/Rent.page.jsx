@@ -10,7 +10,7 @@ export const RentPage = () => {
   const { id } = useParams();
   return (
     <>
-      <AppBar to={`/product/${id}`} title={"대여날짜"} />
+      <AppBar to={`/product/${id}`} title={"대여날짜"} br={true} />
       <main
         aria-label="main"
         className={classnames(
