@@ -5,6 +5,7 @@ import { RiHome5Line } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
 import { VscAccount } from "react-icons/vsc";
 import { CiViewList } from "react-icons/ci";
+import classnames from "classnames";
 
 const IconSize = {
   small: "h-4 w-4",
@@ -14,20 +15,23 @@ const IconSize = {
 
 /**
  * @param {{
+ *  className?: string,
  *  type: keyof typeof IconType,
  *  size: keyof typeof IconSize
  * }}
  */
-export const Icon = ({ type, size = "medium" }) => {
+export const Icon = ({ type, size = "medium", className }) => {
+  const combileClassName = classnames(IconSize[size], className);
+
   const IconType = {
-    search: <BiSearch className={IconSize[size]} />,
-    back: <BsChevronLeft className={IconSize[size]} />,
-    hamberger: <RxHamburgerMenu className={IconSize[size]} />,
-    home: <RiHome5Line className={IconSize[size]} />,
-    close: <AiOutlineClose className={IconSize[size]} />,
-    account: <VscAccount className={IconSize[size]} />,
-    viewlist: <CiViewList className={IconSize[size]} />,
-    message: <BiMessageRoundedDetail className={IconSize[size]} />,
+    search: <BiSearch className={combileClassName} />,
+    back: <BsChevronLeft className={combileClassName} />,
+    hamberger: <RxHamburgerMenu className={combileClassName} />,
+    home: <RiHome5Line className={combileClassName} />,
+    close: <AiOutlineClose className={combileClassName} />,
+    account: <VscAccount className={combileClassName} />,
+    viewlist: <CiViewList className={combileClassName} />,
+    message: <BiMessageRoundedDetail className={combileClassName} />,
   };
 
   return IconType[type];

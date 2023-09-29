@@ -29,10 +29,7 @@ export const ProductItem = ({ data }) => {
   } = data;
 
   return (
-    <Link
-      className="py-4 flex gap-4 text-left w-full"
-      to={`/product/detail/${id}`}
-    >
+    <Link className="py-4 flex gap-4 text-left w-full" to={`/product/${id}`}>
       <div className="h-20 w-20 overflow-hidden">
         <img src={productImagePath[0]} alt={title} />
       </div>
