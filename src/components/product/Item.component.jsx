@@ -1,24 +1,40 @@
+import { Link } from "react-router-dom";
 import { Icon } from "../common/Icon.component";
 import { Txt } from "../common/Txt.component";
 
 /**
  * @param {{
  *  data: {
- *    img: { src: string, alt: string },
+ *    id: string,
+ *    category: string,
+ *    productImagePath: string[],
  *    title: string,
- *    price: { original: number, type: string },
- *    place: string,
+ *    rentalPrice: number,
+ *    regularPrice: number,
+ *    location: string,
  *    commentCount: number,
  *  }
  * }}
  */
 export const ProductItem = ({ data }) => {
-  const { img, title, price, place, commentCount } = data;
+  const {
+    category,
+    commentCount,
+    id,
+    location,
+    productImagePath,
+    regularPrice,
+    rentalPrice,
+    title,
+  } = data;
 
   return (
-    <button className="py-4 flex gap-4 text-left w-full">
+    <Link
+      className="py-4 flex gap-4 text-left w-full"
+      to={`/product/detail/${id}`}
+    >
       <div className="h-20 w-20 overflow-hidden">
-        <img src={img.src} alt={img.alt} />
+        <img src={productImagePath[0]} alt={title} />
       </div>
       <div className="flex flex-col h-20 justify-between flex-1">
         <div className="flex flex-col gap-1 w-full truncate">
@@ -28,12 +44,12 @@ export const ProductItem = ({ data }) => {
             colors="secondaryLight"
             className="font-light"
           >
-            {place}
+            {location}
           </Txt>
         </div>
         <div className="flex w-full justify-between">
           <Txt typography="h6" colors="secondary">
-            {`${price.original} / ${price.type}`}
+            {`${rentalPrice} / 월`}
           </Txt>
           <div className="flex items-center gap-1">
             <Icon type="message" size="small" />
@@ -41,6 +57,6 @@ export const ProductItem = ({ data }) => {
           </div>
         </div>
       </div>
-    </button>
+    </Link>
   );
 };
