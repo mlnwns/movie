@@ -4,7 +4,7 @@ import { Icon } from "../components/common/Icon.component";
 import { Txt } from "../components/common/Txt.component";
 import { Modal } from "../components/common/Modal.component";
 
-const HomePage = () => {
+export const TestPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalAlertOpen, setIsModalAlertOpen] = useState(false);
   const [isModalTodayOpen, setIsModalTodayOpen] = useState(false);
@@ -41,9 +41,7 @@ const HomePage = () => {
       </Modal.Alert>
       <Modal.ToDay
         isOpen={isModalTodayOpen}
-        onClose={() => {
-          setIsModalTodayOpen(false);
-        }}
+        onClose={() => setIsModalTodayOpen(false)}
         onRequestClose={() => setIsModalTodayOpen(false)}
       >
         <img src="https://placehold.co/600x400" alt="placeholder" />
@@ -51,5 +49,3 @@ const HomePage = () => {
     </div>
   );
 };
-
-export default HomePage;

@@ -8,10 +8,13 @@ const typographyType = {
   h5: "text-lg font-bold",
   h6: "text-base font-bold",
   p: "text-base",
+  subtitle: "text-sm",
 };
 
 const colorsType = {
   black: "text-black",
+  secondary: "text-[#B4B4B4]",
+  secondaryLight: "text-[#707070]",
 };
 
 /**
@@ -19,12 +22,22 @@ const colorsType = {
  *  typography: keyof typeof typographyType,
  *  colors: keyof typeof colorsType,
  *  children: React.ReactNode
+ *  className: string
  * }}
  * */
-export const Txt = ({ typography = "p", colors = "black", children }) => {
+export const Txt = ({
+  typography = "p",
+  colors = "black",
+  children,
+  className,
+}) => {
   return (
     <span
-      className={classnames(typographyType[typography], colorsType[colors])}
+      className={classnames(
+        typographyType[typography],
+        colorsType[colors],
+        className
+      )}
     >
       {children}
     </span>

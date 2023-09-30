@@ -18,6 +18,8 @@ const BaseModal = ({ children, isOpen, onRequestClose, className }) => {
     WebkitBackdropFilter: "blur(4px)",
     position: "absolute",
     inset: "0",
+    width: "480px",
+    marginLeft: "1.5rem",
   };
 
   const modalElement = document.getElementById("modal");
@@ -63,11 +65,7 @@ const AlertModal = ({ children, isOpen, onRequestClose, onClose }) => (
  */
 const ToDayModal = ({ children, isOpen, onRequestClose, onClose }) => {
   return (
-    <Modal
-      className="px-0 py-0"
-      isOpen={isOpen}
-      onRequestClose={onRequestClose}
-    >
+    <Modal className="!p-0" isOpen={isOpen} onRequestClose={onRequestClose}>
       <div className="text-center transition-all">{children}</div>
       <div className="flex justify-between items-center">
         <button className="p-2" onClick={onClose}>
