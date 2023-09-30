@@ -1,17 +1,16 @@
+import classnames from "classnames";
 import { useParams } from "react-router-dom";
-import { ProductDetail } from "../components/product/Detail.component";
+import { AppBar } from "../components/common/AppBar.component";
 import { BASE_PADDING } from "../constants";
 import { isIOS, isMobile } from "react-device-detect";
-import classnames from "classnames";
-import { AppBar } from "../components/common/AppBar.component";
+import { RentCalendar } from "../components/rent/Calender.component";
 import { BottomFullLink } from "../components/common/BottomFullLink.component";
 
-export const ProductDetailPage = () => {
+export const RentPage = () => {
   const { id } = useParams();
-
   return (
     <>
-      <AppBar to="/" />
+      <AppBar to={`/product/${id}`} title={"대여날짜"} br={true} />
       <main
         aria-label="main"
         className={classnames(
@@ -22,8 +21,8 @@ export const ProductDetailPage = () => {
             : "h-[calc(100vh-8.5rem)]"
         )}
       >
-        <ProductDetail id={id} />
-        <BottomFullLink title="대여하기" to={`/rent/${id}`} br={true} />
+        <RentCalendar />
+        <BottomFullLink title="결제하기" to={`/payment/${id}`} />
       </main>
     </>
   );
