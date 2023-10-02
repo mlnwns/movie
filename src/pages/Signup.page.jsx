@@ -5,7 +5,7 @@ import { BottomFullLink } from "../components/common/BottomFullLink.component";
 import { Txt } from "../components/common/Txt.component";
 import { Input } from "../components/common/Input.component";
 
-export const LoginPage = () => {
+export const SignupPage = () => {
   return (
     <>
       <main
@@ -18,18 +18,15 @@ export const LoginPage = () => {
             : "h-[calc(100vh-8.5rem)]"
         )}
       >
-        <div class="flex justify-center">
-          <img src="/images/logo.png" alt="app logo" class="w-350 h-auto" />
-        </div>
         <Txt typography="h4" colors="secondaryLight" className="flex">
-          Email
+          안녕하세요!
+        </Txt>
+        <Txt typography="h4" colors="secondaryLight" className="flex">
+          당신을 어떤 이름으로 부르면 좋을까요?
         </Txt>
         <Input type="text" />
-        <Txt typography="h4" colors="secondaryLight" className="flex">
-          password
-        </Txt>
-        <Input type="password" />
-        <BottomFullLink title="로그인" to={`/`} />
+
+        <BottomFullLink title="다음으로" to={`/`} />
       </main>
     </>
   );
