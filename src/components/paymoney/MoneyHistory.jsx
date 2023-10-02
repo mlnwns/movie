@@ -2,7 +2,7 @@ import { Br } from "../common/Br.component";
 import { Txt } from "../common/Txt.component";
 
 
-export const MoneyHistory = ({ piece }) => {
+export const MoneyHistory = ({ }) => {
     const {
         piece,
         coinType,

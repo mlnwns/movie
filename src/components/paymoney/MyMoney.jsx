@@ -10,7 +10,15 @@ export const MyMoney = () => {
         piece: "20000",
     };
     const handleButtonClick1 = () => {
-
+        <Modal.Alert
+            isOpen={isModalAlertOpen}
+            onClose={() => {
+                setIsModalAlertOpen(false);
+            }}
+            onRequestClose={() => setIsModalAlertOpen(false)}
+        >
+            boromi@gmail.com로 예금주명, 계좌번호, 은행명, 출금 금액에 관한 내용을 전달 해 주시기 바랍니다 :&rpar;
+        </Modal.Alert>
     };
 
     const handleButtonClick2 = () => {
