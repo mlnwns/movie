@@ -16,7 +16,7 @@ export const MyMoney = () => {
 
 
     const handleButtonClick = () => {
-        Navigate("/payment/charge");
+        <Navigate to="/paymoney/charge" />;
     };
 
     return (

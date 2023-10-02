@@ -5,6 +5,7 @@ import { ProductDetailPage } from "../src/pages/ProductDetail.page";
 import { RentPage } from "../src/pages/Rent.page";
 import { PayMoneyPage } from "../src/pages/PayMoney.page";
 import { MyPage } from "../src/pages/My.page";
+import { ChargePage } from "../src/pages/Charge.page";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
   {
     path: "/mypage",
     element: <MyPage />,
-  }
+  },
+  {
+    path: "/paymoney/charge",
+    element: <ChargePage />,
+  },
 ]);
 
 export { router };
