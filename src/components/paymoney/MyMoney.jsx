@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Br } from "../common/Br.component";
 import { Button } from "../common/Button.component";
 import { Txt } from "../common/Txt.component";
@@ -7,6 +7,7 @@ import { Modal } from "../common/Modal.component";
 
 export const MyMoney = () => {
     const [isModalAlertOpen, setIsModalAlertOpen] = useState(false);
+    const navigate = useNavigate();
 
     const {
         piece,
@@ -16,7 +17,7 @@ export const MyMoney = () => {
 
 
     const handleButtonClick = () => {
-        <Navigate to="/paymoney/charge" />;
+        navigate('/paymoney/charge');
     };
 
     return (
@@ -42,6 +43,7 @@ export const MyMoney = () => {
                     <br />
                 </Modal.Alert>
                 <Button onClick={handleButtonClick}>충전</Button>
+
             </div>
 
         </>
