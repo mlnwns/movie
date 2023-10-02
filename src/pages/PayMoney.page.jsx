@@ -9,7 +9,7 @@ import { MyMoney } from "../components/paymoney/MyMoney";
 import { MoneyHistory } from "../components/paymoney/MoneyHistory";
 
 export const PayMoneyPage = () => {
-    const { id } = useParams();
+    const { piece } = useParams();
 
     return (
         <>
