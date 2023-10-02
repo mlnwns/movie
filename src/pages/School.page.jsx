@@ -6,7 +6,7 @@ import { Txt } from "../components/common/Txt.component";
 import { Input } from "../components/common/Input.component";
 import { SlidePannel } from "../components/common/SlidePannel.component";
 
-export const SignupPage = () => {
+export const SchoolPage = () => {
   return (
     <>
       <main
@@ -20,27 +20,24 @@ export const SignupPage = () => {
         )}
       >
         <div className="flex justify-center">
+          <SlidePannel className="bg-[#D9D9D9] mt-20 mx-2" />
+          <SlidePannel className="bg-[#D9D9D9] mt-20 mx-2" />
           <SlidePannel className="bg-[#62AB05] mt-20 mx-2" />
-          <SlidePannel className="bg-[#D9D9D9] mt-20 mx-2" />
-          <SlidePannel className="bg-[#D9D9D9] mt-20 mx-2" />
         </div>
 
         <div className="flex flex-col items-center">
           <Txt typography="h6" colors="black" className="my-20">
             안녕하세요!
           </Txt>
-          <Txt typography="h3" colors="black" className=" mb-20 text-center">
-            당신을 어떤 이름으로
+          <Txt typography="h3" colors="black" className="mb-20 text-center">
+            당신의 학교를
             <br />
-            부르면 좋을까요?
+            알고 싶어요
           </Txt>
-          <Input type="text" className="mt-20 w-3/4" />
-          <Txt typography="subtitle" colors="secondaryLight" className="my-1">
-            2글자에서 10글자 이내로 사용할 수 있어요.
-          </Txt>
+          <Input type="text" />
         </div>
 
-        <BottomFullLink title="다음으로" to={`/signup/account`} />
+        <BottomFullLink title="다음으로" to={`/`} />
       </main>
     </>
   );
