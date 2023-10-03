@@ -8,6 +8,7 @@ import { SignupPage } from "../src/pages/Signup.page";
 import { AccountPage } from "../src/pages/Account.page";
 import { SchoolPage } from "../src/pages/School.page";
 import { SchoolCardPage } from "../src/pages/SchoolCard.page";
+import { PaymentPage } from "../src/pages/Payment.page";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,8 @@ const router = createBrowserRouter([
   {
     path: "/signup/schoolcard",
     element: <SchoolCardPage />,
+    path: "/payment/:id",
+    element: <PaymentPage />,
   },
 ]);
 

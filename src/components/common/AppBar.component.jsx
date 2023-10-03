@@ -12,7 +12,7 @@ import { Br } from "./Br.component";
  */
 export const AppBar = ({ to, title, br = false }) => {
   return (
-    <>
+    <nav>
       <Link
         className="px-4 pt-4 pb-3 flex justify-between items-center"
         to={to}
@@ -24,6 +24,6 @@ export const AppBar = ({ to, title, br = false }) => {
         <div className="h-8 w-8"></div>
       </Link>
       {br && <Br />}
-    </>
+    </nav>
   );
 };
