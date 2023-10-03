@@ -15,11 +15,8 @@ export const MoneyHistory = ({ }) => {
     };
 
     return (
-        <>
-            <div className="bg-FCFCFE p-4 rounded-lg">
-                <Txt typography="h5"></Txt>
-            </div>
-
-        </>
-    )
+        <div className="bg-[#FCFCFE] p-4 rounded-lg">
+            <Txt typography="h5"></Txt>
+        </div>
+    );
 };

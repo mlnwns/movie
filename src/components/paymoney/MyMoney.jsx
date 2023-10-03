@@ -22,9 +22,9 @@ export const MyMoney = () => {
 
     return (
         <>
-            <div className="bg-[#F1F1F1] p-2 m-6 rounded-lg w-[350px] h-[80px] flex justify-center">
+            <div className="bg-[#F1F1F1] p-2 m-6 rounded-lg w-[400px] h-[80px] flex justify-center">
                 <Txt typography="h2" className="m-2 p-1">{piece}원</Txt>
-                <Button size="small" className="w-1/5 m-2 bg-gray-500 border-gray-500" onClick={() => setIsModalAlertOpen((prev) => !prev)}>출금</Button>
+                <Button size="small" className="w-1/4 m-2 bg-gray-500 border-gray-500" onClick={() => setIsModalAlertOpen((prev) => !prev)}>출금</Button>
                 <Modal.Alert
                     isOpen={isModalAlertOpen}
                     onClose={() => {
@@ -42,7 +42,7 @@ export const MyMoney = () => {
                     <br />
                     <br />
                 </Modal.Alert>
-                <Button size="small" className="w-1/5 m-2" onClick={handleButtonClick}>충전</Button>
+                <Button size="small" className="w-1/4 m-2" onClick={handleButtonClick}>충전</Button>
 
             </div>
 
