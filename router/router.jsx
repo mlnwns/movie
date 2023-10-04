@@ -3,7 +3,7 @@ import { TestPage } from "../src/pages/Test.page";
 import { HomePage } from "../src/pages/Home.page";
 import { ProductDetailPage } from "../src/pages/ProductDetail.page";
 import { RentPage } from "../src/pages/Rent.page";
-import { LoginPage } from "../src/pages/login.page";
+import { SigninPage } from "../src/pages/Signin.page";
 import { SignupPage } from "../src/pages/Signup.page";
 import { AccountPage } from "../src/pages/Account.page";
 import { SchoolPage } from "../src/pages/School.page";
@@ -27,8 +27,8 @@ const router = createBrowserRouter([
     element: <RentPage />,
   },
   {
-    path: "/login",
-    element: <LoginPage />,
+    path: "/signin",
+    element: <SigninPage />,
   },
   {
     path: "/signup/name",

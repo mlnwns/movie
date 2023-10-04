@@ -3,11 +3,9 @@ import { isIOS, isMobile } from "react-device-detect";
 import classnames from "classnames";
 import { BottomFullLink } from "../components/common/BottomFullLink.component";
 import { Txt } from "../components/common/Txt.component";
-import { InputPassword, InputText } from "../components/sign/Input.component";
-import { SlidePannels } from "../components/sign/SlidePannel.component";
-import { SignInformation } from "../components/sign/Information.component";
+import { InputText, InputPassword } from "../components/sign/Input.component";
 
-export const AccountPage = () => {
+export const SigninPage = () => {
   return (
     <main
       aria-label="main"
@@ -19,17 +17,19 @@ export const AccountPage = () => {
           : "h-[calc(100vh-8.5rem)]"
       )}
     >
-      <div className="mt-20">
-        <SlidePannels maxLengh={3} selectedIndex={1} />
+      <div class="flex justify-center">
+        <img src="/images/logo.png" alt="app logo" class="w-350 h-auto" />
       </div>
-      <div className="flex flex-col items-center">
-        <SignInformation title={`이메일과 비밀번호를\n설정하세요`} />
+      <div className="flex flex-col justify-center items-center">
         <div className="w-3/4">
           <InputText label="Email" />
+        </div>
+        <div className="w-3/4">
           <InputPassword label="Password" />
         </div>
       </div>
-      <BottomFullLink title="다음으로" to={`/signup/school`} />
+
+      <BottomFullLink title="로그인" to={`/`} />
     </main>
   );
 };
