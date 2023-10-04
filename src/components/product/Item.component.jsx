@@ -3,39 +3,22 @@ import { Icon } from "../common/Icon.component";
 import { Txt } from "../common/Txt.component";
 
 /**
- * @param {{
- *  data: {
- *    id: string,
- *    category: string,
- *    productImagePath: string[],
- *    title: string,
- *    rentalPrice: number,
- *    regularPrice: number,
- *    location: string,
- *    commentCount: number,
- *  }
- * }}
+ * @param {object} props
+ * @param {import("../../types/product").product} props.data
+ * @returns {React.FC}
  */
 export const ProductItem = ({ data }) => {
-  const {
-    category,
-    commentCount,
-    id,
-    location,
-    productImagePath,
-    regularPrice,
-    rentalPrice,
-    title,
-  } = data;
+  const { id, name, commentCount, location, productImagePath, rentalPrice } =
+    data;
 
   return (
     <Link className="py-4 flex gap-4 text-left w-full" to={`/product/${id}`}>
       <div className="h-20 w-20 overflow-hidden">
-        <img src={productImagePath[0]} alt={title} />
+        <img src={productImagePath[0]} alt={name} />
       </div>
       <div className="flex flex-col h-20 justify-between flex-1">
         <div className="flex flex-col gap-1 w-full truncate">
-          <Txt typography="h6">{title}</Txt>
+          <Txt typography="h6">{name}</Txt>
           <Txt
             typography="subtitle"
             colors="secondaryLight"

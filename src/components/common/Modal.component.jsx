@@ -50,7 +50,7 @@ const BaseModal = ({ children, isOpen, onRequestClose, className }) => {
 const AlertModal = ({ children, isOpen, onRequestClose, onClose }) => (
   <Modal isOpen={isOpen} onRequestClose={onRequestClose}>
     <div className="text-center my-2 transition-all">{children}</div>
-    <Button className="py-1 w-36 text-sm" onClick={onClose}>
+    <Button size="small" className="w-36 text-sm" onClick={onClose}>
       확인
     </Button>
   </Modal>
