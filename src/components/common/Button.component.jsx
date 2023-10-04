@@ -38,7 +38,7 @@ export const Button = ({
       isActive ? colorType[color] : colorType["secondary"],
       className
     )}
-    onClick={onClick}
+    onClick={isActive && onClick}
   >
     {children}
   </button>
