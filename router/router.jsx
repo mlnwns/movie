@@ -3,6 +3,11 @@ import { TestPage } from "../src/pages/Test.page";
 import { HomePage } from "../src/pages/Home.page";
 import { ProductDetailPage } from "../src/pages/ProductDetail.page";
 import { RentPage } from "../src/pages/Rent.page";
+import { SigninPage } from "../src/pages/Signin.page";
+import { SignupPage } from "../src/pages/Signup.page";
+import { AccountPage } from "../src/pages/Account.page";
+import { SchoolPage } from "../src/pages/School.page";
+import { SchoolCardPage } from "../src/pages/SchoolCard.page";
 import { PayMoneyPage } from "../src/pages/PayMoney.page";
 import { MyPage } from "../src/pages/My.page";
 import { ChargePage } from "../src/pages/Charge.page";
@@ -24,6 +29,26 @@ const router = createBrowserRouter([
   {
     path: "/rent/:id",
     element: <RentPage />,
+  },
+  {
+    path: "/signin",
+    element: <SigninPage />,
+  },
+  {
+    path: "/signup/name",
+    element: <SignupPage />,
+  },
+  {
+    path: "/signup/account",
+    element: <AccountPage />,
+  },
+  {
+    path: "/signup/school",
+    element: <SchoolPage />,
+  },
+  {
+    path: "/signup/schoolcard",
+    element: <SchoolCardPage />,
   },
   {
     path: "/paymoney",
