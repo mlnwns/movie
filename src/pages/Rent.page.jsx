@@ -3,9 +3,13 @@ import { AppBar } from "../components/common/AppBar.component";
 import { RentCalendar } from "../components/rent/Calender.component";
 import { BottomFullLink } from "../components/common/BottomFullLink.component";
 import { MainContainer } from "../components/common/MainContainer.component";
+import { useAtom } from "jotai";
+import { canPayByMoney } from "../stores/payment.atom";
 
 export const RentPage = () => {
   const { id } = useParams();
+  const [canPay] = useAtom(canPayByMoney);
+
   return (
     <>
       <AppBar to={`/product/${id}`} title={"대여날짜"} br={true} />
